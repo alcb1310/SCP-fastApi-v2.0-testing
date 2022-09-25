@@ -6,6 +6,8 @@ END_POINT = "/api/v1.0/budget_items"
 
 def test_authentication():
     print("Testing Authentication on budget_items")
+    print("Must be authenticated to query the budget items")
+    print("\n")
     url = f"{SERVER}{END_POINT}"
     page = requests.get(url)
     assert page.status_code == 401

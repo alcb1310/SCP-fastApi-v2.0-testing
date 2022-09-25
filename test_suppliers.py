@@ -6,6 +6,8 @@ END_POINT = "/api/v1.0/suppliers"
 
 def test_authentication():
     print("Testing Authentication on suppliers")
+    print("Must be authenticated to query the suppliers")
+    print("\n")
     url = f"{SERVER}{END_POINT}"
     page = requests.get(url)
     assert page.status_code == 401
